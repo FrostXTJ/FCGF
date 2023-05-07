@@ -40,6 +40,10 @@ def demo(config):
       device=device,
       skip_check=True)
 
+  print(xyz_down.shape)
+  print(feature.shape)
+
+  '''
   vis_pcd = o3d.geometry.PointCloud()
   vis_pcd.points = o3d.utility.Vector3dVector(xyz_down)
 
@@ -47,6 +51,7 @@ def demo(config):
                                             feature.detach().cpu().numpy(),
                                             config.voxel_size)
   o3d.visualization.draw_geometries([vis_pcd])
+  '''
 
 
 if __name__ == '__main__':
